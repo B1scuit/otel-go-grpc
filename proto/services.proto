@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package B1scuit.otel_go_grpc;
+
+option go_package = "/proto";
+
+message ExampleMessage {
+    string to = 1;
+    string from = 2;
+    string subject = 3; 
+    string body = 4;
+}
+
+service ServiceOne {
+    rpc Example(ExampleMessage) returns (ExampleMessage);
+}
+service ServiceTwo {
+    rpc Example(ExampleMessage) returns (ExampleMessage);
+}
+service ServiceThree {
+    rpc Example(ExampleMessage) returns (ExampleMessage);
+}
